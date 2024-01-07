@@ -10,8 +10,8 @@ import (
 )
 
 func main() {
-	ConfigRuntime()
-	StartWorkers()
+	// ConfigRuntime()
+	// StartWorkers()
 	StartGin()
 }
 
@@ -23,9 +23,9 @@ func ConfigRuntime() {
 }
 
 // StartWorkers start starsWorker by goroutine.
-func StartWorkers() {
-	go statsWorker()
-}
+// func StartWorkers() {
+// 	go statsWorker()
+// }
 
 // StartGin starts gin web server with setting router.
 func StartGin() {
@@ -45,6 +45,6 @@ func StartGin() {
 		port = "8080"
 	}
 	if err := router.Run(":" + port); err != nil {
-        log.Panicf("error: %s", err)
+		log.Panicf("error: %s", err)
 	}
 }
